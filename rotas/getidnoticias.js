@@ -8,10 +8,12 @@ module.exports = (app) => {
                 .collection('noticias')
                 .find({ _id: id })
                 .toArray();
+            console.log(resultado);
             res.json(resultado);
         } catch (error) {
             res.json(error);
 
         }
     })
+
 }
